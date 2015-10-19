@@ -1,0 +1,45 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+header > h1 {
+	display: inline-block;
+	margin-right: 3em;
+}
+
+#input-form {
+	display: inline-block;
+}
+
+#message-board {
+	border: 2px solid black;
+	min-height: 300px;
+}
+
+.text {
+	display: inline-block;
+	margin: 1em 1em 0 1em;
+}
+
+.hide {
+	display: none;
+}
+
+#checkboxes {
+	margin: 0 0 1em 12em;
+}
+
+.dark-theme {
+	background-color: #7A7A7A;
+	color: #F1F1F1;
+}
+
+.large-text {
+	font-size: 30px;
+}
