@@ -1,6 +1,7 @@
 html {
 	margin: 0;
 	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -8,20 +9,68 @@ body {
 	margin: 0 auto;
 }
 
+#container {
+	margin-top: 2em;
+	padding: 20px 24px;
+	background: #f4f7f8;
+	border-radius: 15px;
+}
+
+input[type="text"], button#clear-all {
+	color: black;
+	font-weight: 300; 
+	border: none;
+	height: auto;
+	padding: 15px;
+	outline: 0;
+	margin-bottom: 1.2em;
+	border-radius: .3em;
+	border-bottom: 3px solid rgba(0,0,0, 0.05);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+input[type="text"] {
+	font-size: 1em;
+	width: 50%;
+	background-color: #e8eeef;
+}
+
+button#clear-all {
+	width: 20%;
+	font-size: .9em;
+	background-color: #52bab3;
+}
+
+/*********** HEADER STYLING **************/
 header > h1 {
 	display: inline-block;
 	margin-right: 3em;
+	margin-top: 10px;
 }
 
 #input-form {
 	display: inline-block;
 }
 
+#checkboxes, #names {
+	margin: 0 0 1em 12em;
+}
+
+input[type="radio"]:nth-child(n+2) {
+	margin: 0 5px 0 15px;
+}
+
+
+
 #message-board {
 	border: 2px solid black;
 	min-height: 300px;
+	padding: 1em;
 }
 
+
+
+/************ DYNAMIC ELEMENTS STYLING ***********/
 .text {
 	display: inline-block;
 	margin: 1em 1em 0 1em;
@@ -31,10 +80,6 @@ header > h1 {
 	display: none;
 }
 
-#checkboxes {
-	margin: 0 0 1em 12em;
-}
-
 .dark-theme {
 	background-color: #7A7A7A;
 	color: #F1F1F1;
@@ -42,4 +87,8 @@ header > h1 {
 
 .large-text {
 	font-size: 30px;
+}
+
+.disappear {
+	visibility: hidden;
 }
