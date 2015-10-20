@@ -44,9 +44,6 @@ button#clear-all {
 	background-color: #52bab3;
 }
 
-button#clear-all:disabled {
-	color: #2E3030;
-}
 
 button.edit-message, button.clear-message {
 	color: #2E3030;
@@ -72,6 +69,11 @@ button.clear-message:active {
 button.edit-message:hover,
 button.edit-message:active {
 	background-color: #52bab3;
+}
+
+
+button#clear-all[disabled] {
+	background-color: buttonface;
 }
 
 /*********** HEADER STYLING **************/
@@ -126,9 +128,15 @@ input[type="radio"]:nth-child(n+2) {
 }
 
 .large-text {
-	font-size: 23px;
+	font-size: 20px;
 }
 
 .disappear {
 	visibility: hidden;
+}
+
+.date {
+	font-size: .5em;
+	color: #a2a2a2;
+	margin-top: -.5em;
 }

@@ -52,6 +52,9 @@ function addMessageToBoard () {
 		output += "<button class='clear-message'>";
 		output += "Delete";
 		output += "</button>";
+		output += "<p class='date'>";
+		output += new Date();
+		output += "</p>";
 		output += "</div>";
 		messageBoard.innerHTML = output;
 		messageInput.value = "";
@@ -97,12 +100,12 @@ document.querySelector("body").addEventListener("click", function(event) {
   if (thisElement.className.toLowerCase() === "clear-message") {
     // console.log("You clicked on an delete button ");
     //target parent div
-    thisElement.parentNode.classList.add("hide");
-    if (messageBoard.innerHTML === "") {
+    thisElement.parentNode.remove();
+    if (messageBoard.innerHTML.length < 1) {
     	clearAllButton.setAttribute("disabled", "disabled");
     }
   } else if (thisElement.className.toLowerCase() == "edit-message") {
-  	console.log("You click the edit button");
+  	// console.log("You click the edit button");
   	mode = "edit";
   	targetText = thisElement.previousSibling;
   	messageInput.value = targetText.innerHTML;
