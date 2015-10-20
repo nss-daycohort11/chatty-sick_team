@@ -24,7 +24,7 @@ input[type="text"], button#clear-all {
 	font-weight: 300; 
 	border: none;
 	height: auto;
-	padding: 15px;
+	padding: 10px 15px;
 	outline: 0;
 	margin-bottom: 1.2em;
 	border-radius: .3em;
@@ -79,8 +79,10 @@ button#clear-all[disabled] {
 /*********** HEADER STYLING **************/
 header > h1 {
 	display: inline-block;
-	margin-right: 2.5em;
+	margin-right: 1.85em;
 	margin-top: 10px;
+	font-family: Futura, serif;
+	padding-left: 1em;
 }
 
 #input-form {
@@ -98,10 +100,10 @@ input[type="radio"]:nth-child(n+2) {
 
 
 .message-board {
-	min-height: 300px;
+	height: 300px;
+	overflow: scroll;
 	padding: 1em;
 	border: none;
-	height: auto;
 	padding: 15px;
 	outline: 0;
 	margin-bottom: 1.2em;

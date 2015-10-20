@@ -59,6 +59,9 @@ function addMessageToBoard () {
 		messageBoard.innerHTML = output;
 		messageInput.value = "";
 		clearAllButton.removeAttribute("disabled");
+		if (messageBoard.childNodes.length > 20) {
+			messageBoard.childNodes[0].remove();
+		}
 	} else if (mode === "edit") {
 		targetText.innerHTML = messageInput.value;
 		targetText.classList.remove("disappear");
@@ -117,9 +120,6 @@ document.querySelector("body").addEventListener("click", function(event) {
   	thisName = thisElement.value;
   }
 });
-
-
-
 
 
 
