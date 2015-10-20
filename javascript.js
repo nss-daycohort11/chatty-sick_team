@@ -12,7 +12,7 @@ var namesButtons = document.getElementById("names");
 var mode = "create";
 var targetText = "";
 var users = {
-  names: ["Emma", "Blair", "Max", "Red", "Nathan"]
+  names: ["Emma", "Red", "Nathan"]
 };
 var thisName = "";
 
