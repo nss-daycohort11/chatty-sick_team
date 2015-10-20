@@ -7,6 +7,7 @@ var clearAllButton = document.getElementById("clear-all");
 var messageBoard = document.getElementById("message-board");
 var darkThemeCheckbox = document.getElementById("dark-theme");
 var largeTextCheckbox = document.getElementById("large-text");
+var container = document.getElementById("container");
 var namesButtons = document.getElementById("names");
 var mode = "create";
 var targetText = "";
@@ -25,10 +26,10 @@ for (var i = 0; i < users.names.length; i++) {
 }
 namesButtons.innerHTML = outputNames;
 
-
 // make function for #clear-all button to clear lower div
 function clearAllFunction () {
 	messageBoard.innerHTML = "";
+	clearAllButton.setAttribute("disabled", "disabled");
 }
 
 var output = "";
@@ -47,22 +48,27 @@ function addMessageToBoard () {
 		output += "</p>";
 		output += "<button class='edit-message'>";
 		output += "Edit";
-		output += "</button>"
+		output += "</button>";
 		output += "<button class='clear-message'>";
 		output += "Delete";
 		output += "</button>";
 		output += "</div>";
 		messageBoard.innerHTML = output;
 		messageInput.value = "";
+		clearAllButton.removeAttribute("disabled");
 	} else if (mode === "edit") {
 		targetText.innerHTML = messageInput.value;
 		targetText.classList.remove("disappear");
 		messageInput.value = "";
+		clearAllButton.removeAttribute("disabled");
+		mode = "create";
 	}
 }
 
 function darkTheme () {
 	body[0].classList.toggle("dark-theme");
+	container.classList.toggle("container");
+	container.classList.toggle("dark-container");
 }
 
 function largeText () {
@@ -89,9 +95,12 @@ document.querySelector("body").addEventListener("click", function(event) {
   var thisElement = event.target;
   // handle any click on .clear-message button
   if (thisElement.className.toLowerCase() === "clear-message") {
-    console.log("You clicked on an delete button ");
+    // console.log("You clicked on an delete button ");
     //target parent div
     thisElement.parentNode.classList.add("hide");
+    if (messageBoard.innerHTML === "") {
+    	clearAllButton.setAttribute("disabled", "disabled");
+    }
   } else if (thisElement.className.toLowerCase() == "edit-message") {
   	console.log("You click the edit button");
   	mode = "edit";
