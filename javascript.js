@@ -72,6 +72,8 @@ function darkTheme () {
 	body[0].classList.toggle("dark-theme");
 	container.classList.toggle("container");
 	container.classList.toggle("dark-container");
+	messageBoard.classList.toggle("light-board");
+	messageBoard.classList.toggle("dark-board");
 }
 
 function largeText () {

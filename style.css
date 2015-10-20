@@ -79,7 +79,7 @@ button#clear-all[disabled] {
 /*********** HEADER STYLING **************/
 header > h1 {
 	display: inline-block;
-	margin-right: 3em;
+	margin-right: 2.5em;
 	margin-top: 10px;
 }
 
@@ -97,10 +97,17 @@ input[type="radio"]:nth-child(n+2) {
 
 
 
-#message-board {
-	border: 2px solid black;
+.message-board {
 	min-height: 300px;
 	padding: 1em;
+	border: none;
+	height: auto;
+	padding: 15px;
+	outline: 0;
+	margin-bottom: 1.2em;
+	border-radius: .3em;
+	border-bottom: 3px solid rgba(0,0,0, 0.05);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
 
@@ -125,6 +132,14 @@ input[type="radio"]:nth-child(n+2) {
 
 .dark-container {
 	background: #A2A2A2;
+}
+
+.light-board {
+	background: #e8eeef;
+}
+
+.dark-board {
+	background: #7A7A7A;
 }
 
 .large-text {
